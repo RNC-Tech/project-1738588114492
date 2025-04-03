@@ -10,6 +10,7 @@ export default function ProjectsPage() {
 
     const projects = [
         {
+            id: 'e-commerce-platform',
             title: 'E-Commerce Platform',
             category: 'Web Development',
             image: '/path/to/image1.jpg',
@@ -30,6 +31,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'brand-identity',
             title: 'Brand Identity',
             category: 'Graphics',
             image: '/path/to/image3.jpg',
@@ -40,6 +42,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'electronic-ep',
             title: 'Electronic EP',
             category: 'Music',
             image: '/path/to/image4.jpg',
@@ -50,6 +53,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'short-film',
             title: 'Short Film',
             category: 'Video',
             image: '/path/to/image5.jpg',
@@ -60,6 +64,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'mobile-app-ui',
             title: 'Mobile App UI',
             category: 'Web Development',
             image: '/path/to/image6.jpg',
@@ -70,6 +75,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'digital-art-collection',
             title: 'Digital Art Collection',
             category: 'Illustration',
             image: '/path/to/image7.jpg',
@@ -80,6 +86,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'corporate-website',
             title: 'Corporate Website',
             category: 'Web Development',
             image: '/path/to/image8.jpg',
@@ -90,6 +97,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'album-cover-design',
             title: 'Album Cover Design',
             category: 'Graphics',
             image: '/path/to/image9.jpg',
@@ -100,6 +108,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'music-video',
             title: 'Music Video',
             category: 'Video',
             image: '/path/to/image10.jpg',
@@ -110,6 +119,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'ambient-music-album',
             title: 'Ambient Music Album',
             category: 'Music',
             image: '/path/to/image11.jpg',
@@ -120,6 +130,7 @@ export default function ProjectsPage() {
             link: '#',
         },
         {
+            id: 'portfolio-website',
             title: 'Portfolio Website',
             category: 'Web Development',
             image: '/path/to/image12.jpg',
@@ -184,10 +195,11 @@ export default function ProjectsPage() {
                     data-oid="ipiu41n"
                 >
                     {filteredProjects.map((project, index) => (
-                        <div
+                        <Link
+                            href={`/projects/${project.id}`}
                             key={index}
-                            className="group bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden
-                                     hover:transform hover:scale-105 transition-all duration-300"
+                            className="block group bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden
+                                     hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
                             data-oid="4:v9ax1"
                         >
                             <div
@@ -234,17 +246,16 @@ export default function ProjectsPage() {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="mt-4 flex gap-2" data-oid="3x0h0bi">
-                                    <a
-                                        href={project.link}
-                                        className="text-sm px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:opacity-90 transition-opacity"
+                                <div className="mt-4" data-oid="3x0h0bi">
+                                    <span
+                                        className="inline-block text-sm px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:opacity-90 transition-opacity"
                                         data-oid="n8irb8e"
                                     >
-                                        View Project
-                                    </a>
+                                        View Details
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
