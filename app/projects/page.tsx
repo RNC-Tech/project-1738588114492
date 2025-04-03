@@ -137,30 +137,26 @@ export default function ProjectsPage() {
             : projects.filter((project) => project.category === activeCategory);
 
     return (
-        <div className="min-h-screen bg-slate-900 text-white p-8" data-oid="f3vktw4">
-            <div className="max-w-6xl mx-auto" data-oid="j:61237">
-                <header className="py-12 text-center" data-oid="ifp0gjh">
+        <div className="min-h-screen bg-slate-900 text-white p-8">
+            <div className="max-w-6xl mx-auto">
+                <header className="py-12 text-center">
                     <Link
                         href="/"
                         className="inline-block mb-8 text-purple-300 hover:text-pink-300 transition-colors"
-                        data-oid="0p.m-69"
                     >
                         ← Back to Home
                     </Link>
-                    <h1
-                        className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300"
-                        data-oid="7udr3g_"
-                    >
+                    <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
                         My Projects
                     </h1>
-                    <p className="text-xl text-purple-200 max-w-3xl mx-auto" data-oid="rv3_3pu">
+                    <p className="text-xl text-purple-200 max-w-3xl mx-auto">
                         A comprehensive collection of my work across web development, illustration,
                         graphics design, music production, and video editing.
                     </p>
                 </header>
 
                 {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-4 mb-16" data-oid="4b29sav">
+                <div className="flex flex-wrap justify-center gap-4 mb-16">
                     {categories.map((category) => (
                         <button
                             key={category}
@@ -171,7 +167,6 @@ export default function ProjectsPage() {
                                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
                                         : 'bg-white/10 text-purple-200 hover:bg-white/20 hover:text-pink-300'
                                 }`}
-                            data-oid="nb2gkpu"
                         >
                             {category}
                         </button>
@@ -179,66 +174,46 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Projects Grid */}
-                <div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    data-oid="gbzjl64"
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProjects.map((project, index) => (
                         <div
                             key={index}
                             className="group bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden
                                      hover:transform hover:scale-105 transition-all duration-300"
-                            data-oid="4s9pr46"
                         >
-                            <div
-                                className="aspect-video bg-gradient-to-r from-purple-400 to-pink-400 relative"
-                                data-oid="a0tj7rh"
-                            >
+                            <div className="aspect-video bg-gradient-to-r from-purple-400 to-pink-400 relative">
                                 {/* Replace with actual images */}
-                                <div
-                                    className="absolute inset-0 flex items-center justify-center text-white/50 bg-[#3E3E3E]"
-                                    data-oid="2vky_.z"
-                                >
+                                <div className="absolute inset-0 flex items-center justify-center text-white/50 bg-[#3E3E3E]">
                                     {project.category}
                                 </div>
                             </div>
-                            <div className="p-6" data-oid="zxicglx">
-                                <span
-                                    className="text-sm text-pink-300 mb-2 block"
-                                    data-oid="fozb5xo"
-                                >
+                            <div className="p-6">
+                                <span className="text-sm text-pink-300 mb-2 block">
                                     {project.category}
                                 </span>
-                                <h3 className="text-xl font-bold mb-2" data-oid="1uxo81n">
-                                    {project.title}
-                                </h3>
-                                <p className="text-purple-200 text-sm mb-4" data-oid="-w3.lv4">
+                                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                <p className="text-purple-200 text-sm mb-4">
                                     {project.description}
                                 </p>
-                                <div className="mb-4" data-oid="ky1p36f">
-                                    <h4
-                                        className="text-sm font-semibold text-purple-300 mb-2"
-                                        data-oid="9utx8zh"
-                                    >
+                                <div className="mb-4">
+                                    <h4 className="text-sm font-semibold text-purple-300 mb-2">
                                         Technologies:
                                     </h4>
-                                    <div className="flex flex-wrap gap-2" data-oid="r0i01h9">
+                                    <div className="flex flex-wrap gap-2">
                                         {project.technologies.map((tech, i) => (
                                             <span
                                                 key={i}
                                                 className="text-xs px-2 py-1 bg-white/5 rounded-full text-purple-200"
-                                                data-oid="n7i1c6:"
                                             >
                                                 {tech}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
-                                <div className="mt-4 flex gap-2" data-oid="3c1zqqe">
+                                <div className="mt-4 flex gap-2">
                                     <a
                                         href={project.link}
                                         className="text-sm px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:opacity-90 transition-opacity"
-                                        data-oid="yoaofaj"
                                     >
                                         View Project
                                     </a>
